@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        AllHeroData allHeroData = AllHeroData.getInstance();
+        AllHeroData allHeroData = new AllHeroData();
         allHeroData.getFav().add((new HeroData("Ancient Apparition", "INT", 2)));
         CsvWriter.Write(allHeroData.getFav(), "FavoriteHero.csv");
         CsvWriter.Write(allHeroData.getData(), "AllHero.csv");

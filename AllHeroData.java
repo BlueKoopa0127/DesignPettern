@@ -2,11 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AllHeroData {
-    private static AllHeroData heroList = new AllHeroData();
     private List<HeroData> fav;
     private HeroData[] data;
 
-    private AllHeroData() {
+    public AllHeroData() {
         fav = new ArrayList<HeroData>();
         fav.add(new HeroData("Viper", "STR", 1));
         fav.add(new HeroData("Undying", "STR", 1));
@@ -16,10 +15,6 @@ public class AllHeroData {
                 new HeroData("Arc Warden", "AGI", 3),
                 new HeroData("Viper", "AGI", 1), new HeroData("Ancient Apparition", "INT", 2),
                 new HeroData("Bane", "INT", 2) };
-    }
-
-    public static AllHeroData getInstance() {
-        return heroList;
     }
 
     public List<HeroData> getFav() {
