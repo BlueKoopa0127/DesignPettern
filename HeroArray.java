@@ -1,7 +1,7 @@
 import java.util.Iterator;
 
 public class HeroArray implements Aggregate<HeroData> {
-    public HeroData[] heroDatas;
+    private HeroData[] heroDatas;
 
     public HeroArray(HeroData[] h) {
         heroDatas = h;

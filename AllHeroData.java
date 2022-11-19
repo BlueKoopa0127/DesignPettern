@@ -22,27 +22,31 @@ public class AllHeroData {
         return heroList;
     }
 
-    public Iterator<HeroData> getFav() {
+    public Iterator<HeroData> getFavIte() {
         return fav.iterator();
     }
 
-    public Iterator<HeroData> getAll() {
+    public HeroList getFav() {
+        return fav;
+    }
+
+    public Iterator<HeroData> getAllIte() {
         HeroList list = new HeroList(new ArrayList<HeroData>());
-        list.appendList(getStr());
-        list.appendList(getAgi());
-        list.appendList(getInt());
+        list.appendList(getStrIte());
+        list.appendList(getAgiIte());
+        list.appendList(getIntIte());
         return list.iterator();
     }
 
-    public Iterator<HeroData> getStr() {
+    public Iterator<HeroData> getStrIte() {
         return str.iterator();
     }
 
-    public Iterator<HeroData> getAgi() {
+    public Iterator<HeroData> getAgiIte() {
         return agi.iterator();
     }
 
-    public Iterator<HeroData> getInt() {
+    public Iterator<HeroData> getIntIte() {
         return inte.iterator();
     }
 }

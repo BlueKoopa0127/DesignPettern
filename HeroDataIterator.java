@@ -1,20 +1,20 @@
 import java.util.Iterator;
 
 public class HeroDataIterator implements Iterator<HeroData> {
-    private Aggregate<HeroData> heroTypeList;
+    private Aggregate<HeroData> heroAggr;
     private int index;
 
     public HeroDataIterator(Aggregate<HeroData> h) {
-        heroTypeList = h;
+        heroAggr = h;
         index = 0;
     }
 
     public boolean hasNext() {
-        return index < heroTypeList.getLength();
+        return index < heroAggr.getLength();
     }
 
     public HeroData next() {
-        HeroData h = heroTypeList.getAt(index);
+        HeroData h = heroAggr.getAt(index);
         index++;
         return h;
     }

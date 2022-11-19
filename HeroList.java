@@ -2,7 +2,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class HeroList implements Aggregate<HeroData> {
-    public List<HeroData> heroList;
+    private List<HeroData> heroList;
 
     public HeroList(List<HeroData> h) {
         heroList = h;
