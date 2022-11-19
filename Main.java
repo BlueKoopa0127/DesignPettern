@@ -4,13 +4,15 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         AllHeroData allHeroData = AllHeroData.getInstance();
-        allHeroData.getFav().append(new HeroData("Ancient Apparition", 2));
-        CsvWriter.Write(allHeroData.getFavIte(), "favorite.csv");
-        CsvWriter.Write(allHeroData.getAllIte(), "allHero.csv");
+        allHeroData.getFav().append(new HeroData("Ancient Apparition", "INT", 2));
+        CsvWriter.Write(allHeroData.getFav().iterator(), "FavoriteHero.csv");
+        CsvWriter.Write(allHeroData.getData().iterator(), "AllHero.csv");
+        CsvWriter.Write(allHeroData.getData().iterator_complexity1(), "Complexity1Hero.csv");
+        CsvWriter.Write(allHeroData.getData().iterator_str(), "StrHero.csv");
 
         List<PersonData> peopleData = new ArrayList<PersonData>();
         peopleData.add(new PersonData("Tsukada", 20));
         peopleData.add(new PersonData("Tago", 23));
-        CsvWriter.Write(peopleData.iterator(), "peopleData.csv");
+        CsvWriter.Write(peopleData.iterator(), "PeopleData.csv");
     }
 }

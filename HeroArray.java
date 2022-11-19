@@ -1,14 +1,8 @@
-import java.util.Iterator;
-
-public class HeroArray implements Aggregate<HeroData> {
+public class HeroArray extends HeroDataAggregate {
     private HeroData[] heroDatas;
 
     public HeroArray(HeroData[] h) {
         heroDatas = h;
-    }
-
-    public Iterator<HeroData> iterator() {
-        return new HeroDataIterator(this);
     }
 
     public int getLength() {

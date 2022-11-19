@@ -1,15 +1,11 @@
 import java.util.Iterator;
 import java.util.List;
 
-public class HeroList implements Aggregate<HeroData> {
+public class HeroList extends HeroDataAggregate {
     private List<HeroData> heroList;
 
     public HeroList(List<HeroData> h) {
         heroList = h;
-    }
-
-    public Iterator<HeroData> iterator() {
-        return new HeroDataIterator(this);
     }
 
     public HeroData getAt(int index) {
