@@ -10,14 +10,14 @@ public class Main {
 
         List<HeroData> complexity1 = new ArrayList<HeroData>();
         for (HeroData d : allHeroData.getData()) {
-            if (d.complexity == 1) {
+            if (d.getCompelxity() == 1) {
                 complexity1.add(d);
             }
         }
 
         List<HeroData> str = new ArrayList<HeroData>();
         for (HeroData d : allHeroData.getData()) {
-            if (d.type == "STR") {
+            if (d.getType() == "STR") {
                 str.add(d);
             }
         }
