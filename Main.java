@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
         AllHeroData allHeroData = AllHeroData.getInstance();
@@ -9,10 +6,5 @@ public class Main {
         CsvWriter.Write(allHeroData.getData().iterator(), "AllHero.csv");
         CsvWriter.Write(allHeroData.getData().iterator_complexity1(), "Complexity1Hero.csv");
         CsvWriter.Write(allHeroData.getData().iterator_str(), "StrHero.csv");
-
-        List<PersonData> peopleData = new ArrayList<PersonData>();
-        peopleData.add(new PersonData("Tsukada", 20));
-        peopleData.add(new PersonData("Tago", 23));
-        CsvWriter.Write(peopleData.iterator(), "PeopleData.csv");
     }
 }
