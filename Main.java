@@ -24,10 +24,5 @@ public class Main {
 
         CsvWriter.Write(complexity1, "Complexity1Hero.csv");
         CsvWriter.Write(str, "StrHero.csv");
-
-        List<PersonData> peopleData = new ArrayList<PersonData>();
-        peopleData.add(new PersonData("Tsukada", 20));
-        peopleData.add(new PersonData("Tago", 23));
-        CsvWriter.Write(peopleData, "PeopleData.csv");
     }
 }
