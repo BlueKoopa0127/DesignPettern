@@ -12,7 +12,7 @@ public class HeroDataIterator_str implements Iterator<HeroData> {
     public boolean hasNext() {
         while (index < heroAggr.getLength()) {
             HeroData h = heroAggr.getAt(index);
-            if (h.type == "STR") {
+            if (h.getType() == "STR") {
                 return true;
             }
             index++;
